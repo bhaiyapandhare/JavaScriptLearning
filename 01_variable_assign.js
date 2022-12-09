@@ -1,3 +1,5 @@
+var myName;
+console.log(myName);
 var myFullName;
 myFullName= "Maruti Pandhare";
 console.log(myFullName)
