@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Storage</title>
+  </head>
+  <body>  
+    <h1>Session Local Storage</h1>
+    <script>
+      console.log("Hello --> Session storage");
+      window.localStorage.setItem("name", "Maruti Ambadas Pandhare");
+      window.localStorage.setItem("city", "Pune");
+      window.localStorage.setItem(`pinCode`, `411058`);
+      window.localStorage.setItem(`district`, `Pune`);
+
+      const leng = window.localStorage.length;
+      console.log(leng);
+      const pin = window.localStorage.getItem(`pinCode`);
+      console.log(pin);
+
+      window.localStorage.removeItem(`city`);
+
+
+    </script>
+  </body>
+</html>
