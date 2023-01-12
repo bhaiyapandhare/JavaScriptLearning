@@ -7,25 +7,10 @@ class Bank {
   }
 }
 
-let axisBank = new Bank(
-  "Axis Bank",
-  "Fergusson College Road",
-  "UTIB0000037",
-  "8.5%"
-);
-let sbiBank = new Bank(
-  "State Bank of India",
-  "Deccan Gynkhana",
-  "SBIN000111",
-  "8%"
-);
+let axisBank = new Bank("Axis Bank","Fergusson College Road","UTIB0000037","8.5%");
+let sbiBank = new Bank("State Bank of India","Deccan Gynkhana","SBIN000111","8%");
 let iciciBank = new Bank("ICICI Bank", "Shivaji Nagar", "ICIC0006997", "8.6%");
-let kotakBank = new Bank(
-  "Kotak Bank",
-  " Senapati Bapat Road",
-  "KKBK0001772",
-  "8.4%"
-);
+let kotakBank = new Bank("Kotak Bank", " Senapati Bapat Road", "KKBK0001772", "8.4%");
 let panjabBank = new Bank("Panjab bank", "FC Road", "PUNB0014110", "8.3%");
 let hdfcBank = new Bank("HDFC Bank", "Bund Garden Rd", "HDFC0004629", "8.7%");
 
