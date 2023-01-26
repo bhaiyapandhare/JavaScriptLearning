@@ -1,3 +1,4 @@
+
 class Employee{
     constructor(emp_id,emp_name,emp_dept, emp_salary, emp_company){
         this.emp_id = emp_id;
@@ -8,13 +9,13 @@ class Employee{
 
     } 
 }
-let emp_anil = new Employee(22, "Anil  ", "IT   ", 50000, "TCS ");
-let emp_radha = new Employee(33,"Radha ", "HR   ", 74000, "Wipro");
-let emp_rushi = new Employee(55,"Rushi ", "Finance", 47000, "TCS ");
+let emp_anil = new Employee(22, "Anil  ", "IT", 50000, "TCS");
+let emp_radha = new Employee(33,"Radha ", "HR", 74000, "Wipro");
+let emp_rushi = new Employee(55,"Rushi", "Finance", 47000, "TCS");
 let emp_sonali = new Employee(66,"Sonali", "Finance", 45000, "Infy");
-let emp_monika = new Employee(77,"Monika", "IT     ", 40000, "Wipro");
-let emp_viny = new Employee(88,"Vinny ", "IT     ", 75000, "TCS ");
-let emp_mahi = new Employee(99,"Mahi  ", "HR     ", 85000, "Infy");
+let emp_monika = new Employee(77,"Monika", "IT", 40000, "Wipro");
+let emp_viny = new Employee(88,"Vinny ", "IT", 75000, "TCS");
+let emp_mahi = new Employee(99,"Mahi  ", "HR", 85000, "Infy");
 
 const array_emps = [emp_anil, emp_radha, emp_rushi, emp_sonali, emp_monika, emp_viny, emp_mahi]
 
@@ -27,19 +28,68 @@ console.log(`Name:`, emp.emp_name , `   `, `Comapny:`,  emp.emp_company ,`  `, `
 })
 
 
-const emp_department =  array_emps.filter((value1)=>{
-    if (value1.emp_dept== "IT" || value1.emp_dept== "HR") {
-        return value1;
+ const emp_department =  array_emps.filter((value)=>{
+    if (value.emp_dept== "IT" || value.emp_dept== "HR") {
+        return value;
     }  
 })
+console.log("===It or Hr Dept===");
 emp_department.forEach((val)=>{
 console.log(`Name:`, val.emp_name , `Department:`, val.emp_dept,  `Comapny:`,  val.emp_company ,`  `, ` Salary:` , val.emp_salary);
 })
-
 const emp_idFilter = array_emps.filter((value)=>{
- return value.emp_id> 50;
+    return value.emp_id> 50;
+   })
+   console.log("====ID>50====");
+   emp_idFilter.forEach((values)=>{
+   console.log(`ID:`,values.emp_id, `Name:`, values.emp_name , `Department:`, values.emp_dept, ` Salary:` , values.emp_salary, `Comapny:`,  values.emp_company , );
+   })
+console.log(`\n`);
+
+   const nameFilter = array_emps.filter(avm=>{
+    if (avm.emp_name.startsWith("A")||avm.emp_name.startsWith("V")||avm.emp_name.startsWith("M")) {
+        return avm.emp_name ;
+    }
+   })
+   nameFilter.forEach(value=>{
+console.log(`Name:`, value.emp_name);
+   })
+
+var totalSal = 0 ; 
+array_emps.forEach((value)=>{
+    totalSal += value.emp_salary;
 })
-console.log("====ID>50====");
-emp_idFilter.forEach((values)=>{
-console.log(`ID:`,values.emp_id, `Name:`, values.emp_name , `Department:`, values.emp_dept, ` Salary:` , values.emp_salary, `Comapny:`,  values.emp_company , );
+console.log(`Total salary of all employees:`,totalSal);
+const averageSal = totalSal/array_emps.length;
+console.log(`Average salary of all employees:`,averageSal);
+
+
+// var salary = array_emps.filter(value=> value.emp_dept=="IT")
+// .reduce((runningTotal, value)=> runningTotal + value.emp_salary);
+// console.log(salary);
+
+const itDept = array_emps.filter((value)=>{
+    return value.emp_dept=="IT";  
+})    
+itDept.forEach((value)=>{
+    console.log(value);
+})
+
+const itDept1 = array_emps.filter((value)=>{
+    return value.emp_dept1=="IT";  
+})    
+var totalSalaryIT = 0;
+itDept.forEach((value)=>{
+        console.log(value.emp_salary);
+        totalSalaryIT += value.emp_salary
+})
+const avgOfItDept = totalSalaryIT/itDept.length;
+console.log(`Total salary of IT Dept :`, totalSalaryIT);
+console.log(`Average salary of IT Dept :`,avgOfItDept);
+
+let deptfilter = array_emps.filter((itemp)=>{
+return itemp.emp_dept == "IT";
+})
+deptfilter.forEach((val)=>{
+    console.log(`Name:`, val.emp_name , `Department:`, val.emp_dept,  `Comapny:`,  val.emp_company ,`  `, ` Salary:` , val.emp_salary);
 })
