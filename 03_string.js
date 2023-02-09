@@ -28,3 +28,22 @@ console.log("Total number students: ", studListSplit.length);
 var sentence = "Yes you can do it guys, just keep learning and practising as well";
 var wordsInSentence =  sentence.split(" ");
 console.log("Total words in sentence string is: ", wordsInSentence.length);
+
+var movie = "Pathan"
+var reverse = movie.split("").reverse("").join("");
+console.log(reverse);
+
+
+var movie= "The Lion King the King of Forest";
+var reverse = movie.split("").reverse("").join("");
+console.log(reverse);       
+ 
+
+ var Maruti ={
+    graduation: "Engineering",
+    Branch : "Mechnical",
+    passout:2018,
+    percent : "76%",
+
+ }
+ console.log(`${Maruti.percent}  ${Maruti.graduation}  ${Maruti.Branch} `);

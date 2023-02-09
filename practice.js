@@ -117,15 +117,15 @@ b = temp;
     
 // }
 
-// var palin = "level";
-// var lastIndex = palin.length-1;
-// for (let index = 0; index < palin.length/2; index++) {
-//     const element = palin[index];
+var palin = "level";
+var lastIndex = palin.length-1;
+for (let index = 0; index < palin.length/2; index++) {
+    const element = palin[index];
 
-//     if (index== lastIndex-index ) {
-//         console.log(`Palindrome of  word level:`, element);
-//     }
-// }
+    if (index== lastIndex-index ) {
+        console.log(`Palindrome of  word level:`, element);
+    }
+}
 
 const arraylist =[2,3,6,11,67,89,0,3,45]
 
@@ -137,3 +137,21 @@ console.log(arraylist);
 // console.log(arraylist.shift(66));
 arraylist.push(5)
 console.log(arraylist);
+
+var fn="Yash ";
+var sn="Pandhare"
+var n= fn + sn
+console.log(n);
+var name1= fn.concat("Ambadas ",sn);
+console.log(name1);
+
+var st= "    ...Think and Grow Rich.    .    ";
+console.log(st.charAt(18));
+console.log(st.length);
+console.log(st.indexOf("i"));
+console.log(st.trimStart());
+console.log(st.trimEnd());
+console.log(st.split("").join(" "));
+console.log(st.indexOf("T"));
+console.log(st.slice(7));
+var rep =st.replaceAll("\\s",""));

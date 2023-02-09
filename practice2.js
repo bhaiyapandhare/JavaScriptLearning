@@ -126,63 +126,63 @@
 // console.log(`Area of triangle base : ${base}, height: ${height}, area ${area} `);
 
 
-class Employee{
-    constructor(emp_id,emp_name,emp_dept, emp_salary, emp_company){
-        this.emp_id = emp_id;
-        this.emp_name = emp_name;
-        this.emp_dept = emp_dept;
-        this.emp_salary = emp_salary;
-        this.emp_company = emp_company;
+// class Employee{
+//     constructor(emp_id,emp_name,emp_dept, emp_salary, emp_company){
+//         this.emp_id = emp_id;
+//         this.emp_name = emp_name;
+//         this.emp_dept = emp_dept;
+//         this.emp_salary = emp_salary;
+//         this.emp_company = emp_company;
 
-    } 
-}
-let emp_anil = new Employee(22, "Anil  ", "IT", 50000, "TCS");
-let emp_radha = new Employee(33,"Radha ", "HR", 74000, "Wipro");
-let emp_rushi = new Employee(55,"Rushi", "Finance", 47000, "TCS");
-let emp_sonali = new Employee(66,"Sonali", "Finance", 45000, "Infy");
-let emp_monika = new Employee(77,"Monika", "IT", 40000, "Wipro");
-let emp_viny = new Employee(88,"Vinny ", "IT", 75000, "TCS");
-let emp_mahi = new Employee(99,"Mahi  ", "HR", 85000, "Infy");
+//     } 
+// }
+// let emp_anil = new Employee(22, "Anil  ", "IT", 50000, "TCS");
+// let emp_radha = new Employee(33,"Radha ", "HR", 74000, "Wipro");
+// let emp_rushi = new Employee(55,"Rushi", "Finance", 47000, "TCS");
+// let emp_sonali = new Employee(66,"Sonali", "Finance", 45000, "Infy");
+// let emp_monika = new Employee(77,"Monika", "IT", 40000, "Wipro");
+// let emp_viny = new Employee(88,"Vinny ", "IT", 75000, "TCS");
+// let emp_mahi = new Employee(99,"Mahi  ", "HR", 85000, "Infy");
 
-const array_emps = [emp_anil, emp_radha, emp_rushi, emp_sonali, emp_monika, emp_viny, emp_mahi]
+// const array_emps = [emp_anil, emp_radha, emp_rushi, emp_sonali, emp_monika, emp_viny, emp_mahi]
 
-let addition = 0; 
-const deptFilter =  array_emps.filter((val)=>{
-  if (val.emp_company == "Wipro") {
-    return addition += val.emp_salary; 
-  }  
-})
-console.log(addition/deptFilter.length);
-
-
-const array_roll_numbers=[113,45,56,11,32,45,109,799,56,45];
-
-const evenNumber = array_roll_numbers.filter((val)=>{
-    return val%2 == 0;
-})
-console.log(evenNumber);
-var sumOfEven=0;
- evenNumber.forEach((even)=>{
-    console.log(even);
-    sumOfEven += even; 
-})
-console.log(sumOfEven);
+// let addition = 0; 
+// const deptFilter =  array_emps.filter((val)=>{
+//   if (val.emp_company == "Wipro") {
+//     return addition += val.emp_salary; 
+//   }  
+// })
+// console.log(addition/deptFilter.length);
 
 
-let evenValue = array_roll_numbers.filter(val=>val%2==0)
-.reduce((runningTotal, value)=>{
-    return runningTotal+value;
-})
+// const array_roll_numbers=[113,45,56,11,32,45,109,799,56,45];
 
-console.log( `Using filter and Reduce `,evenValue);
+// const evenNumber = array_roll_numbers.filter((val)=>{
+//     return val%2 == 0;
+// })
+// console.log(evenNumber);
+// var sumOfEven=0;
+//  evenNumber.forEach((even)=>{
+//     console.log(even);
+//     sumOfEven += even; 
+// })
+// console.log(sumOfEven);
 
-const arrayTransform = array_roll_numbers.map((curremtValue, index , array)=>{
-return curremtValue+index ;
-console.log(array);
 
-})
-console.log(array_roll_numbers);
-console.log(arrayTransform);
+// let evenValue = array_roll_numbers.filter(val=>val%2==0)
+// .reduce((runningTotal, value)=>{
+//     return runningTotal+value;
+// })
+
+// console.log( `Using filter and Reduce `,evenValue);
+
+// const arrayTransform = array_roll_numbers.map((curremtValue, index , array)=>{
+// return curremtValue+index ;
+// console.log(array);
+
+// })
+// console.log(array_roll_numbers);
+// console.log(arrayTransform);
 // console.log(array);
 
 
@@ -203,3 +203,36 @@ console.log(arrayTransform);
 // console.log(currentValue);
 //     console.log(index);
 //     console.log(array);
+
+
+var n1 = 15;
+var n2 = 7;
+// var add = n1 +n2 ;
+
+n1 += n2; 
+console.log(n1);
+console.log(n2);
+
+var n1 = 15;
+var add1= --n1;
+console.log(add1);
+
+var n1 = 15;
+var n2 = 7;
+var n3 = 13;
+var result = n1<n2;
+console.log(result);
+
+console.log(20%2);
+
+var subjetMarks = 39; //out of 100 
+var passOrFail = subjetMarks>=40 ? "Pass" : "Fail";
+console.log(passOrFail);
+
+
+var n1 = 15;
+var n2 = 7; 
+
+var greaterNum = n1<n2 ? n1 :n2;
+console.log( `Gareter num from n1 =${n1} and n2 = ${n2} ===  `,greaterNum);
+
