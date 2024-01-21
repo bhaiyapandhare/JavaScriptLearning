@@ -236,3 +236,160 @@ var n2 = 7;
 var greaterNum = n1<n2 ? n1 :n2;
 console.log( `Gareter num from n1 =${n1} and n2 = ${n2} ===  `,greaterNum);
 
+let person={
+    name:`Yash`,
+    age:27,   
+    sal:100000,
+    work:`5 Days`,
+}
+console.log(person.name);
+
+person.comp=`Google`;
+console.log(person.comp);
+delete person.work
+console.log(person);
+person.comp=`Netflix`;
+console.log(person);
+
+
+const str= `Welcome Home`;
+
+for(let w in str){
+    console.log(str[w], w); // getting index of object 
+}
+
+for(let v of str){
+    console.log(v); // getting values of object that is w , e ,l
+}
+
+let persons={
+    name:`Yash`,
+    age:27,   
+    sal:100000,
+    work:`5 Days`,
+}
+for(let key in persons){
+console.log(`${key}=> ${persons[key]}`);
+}
+console.log("sal"in persons);
+
+function Aarya (name,weight, age){
+    this.name=name;
+    this.weight=weight;
+    this.age=age;
+    this.greet = function(){
+        return(`Hi Baby `+ this.name); 
+    };
+
+this.show =function(){
+return ("Yes I am Beautiful");
+}
+}
+let Tanuja = new Aarya("Tanuja", 40,16);
+let Bhumika = new Aarya("Bhumika",41,16);
+console.log(Tanuja, Tanuja.greet() ,Tanuja.show());
+console.log(Bhumika, Bhumika.greet());
+
+console.log(Tanuja.name,Tanuja.greet());
+console.log(Tanuja.show());
+
+Aarya.prototype.look=`Sexy`;
+Aarya.prototype.eyes= `Glittering`
+console.log(Tanuja.look , Bhumika.eyes);
+console.log(Tanuja instanceof Aarya);
+
+
+
+let date=new Date();
+console.log(date);
+console.log(date.getDate());
+console.log(date.getDay());
+console.log(date.toDateString());
+console.log(date.toTimeString());
+console.log(date.getMilliseconds());
+const dd= new Date("09/12/2023")
+console.log(dd);
+
+
+class Car{
+    name= "Skoda";
+    seg = "SUV";
+    model= "Kodiaq";
+}
+const SK=new Car();
+console.log(SK);
+console.log(SK instanceof Car);
+
+
+
+
+let person2={
+    name:`Yash`,
+    age:27,   
+    sal:100000,
+    work:`5 Days`,
+}
+
+let clonedP2= Object.assign({},person2);
+
+console.log(person2);
+console.log(clonedP2);
+
+person2.name='Maruti';
+person2.age=18;
+console.log(person2);
+console.log(clonedP2);
+
+// person2.name="Sanket";
+// console.log(person2);
+// console.log(clonedP2);
+
+const array=[0,2,3,4,6,9];
+for (let index = (array.length-1); index>=0; index--) {
+    const element = array[index];
+    console.log(element);
+}
+console.log(array);
+
+console.log(array.push(11) , array);
+console.log(array.pop(), array);
+console.log(array.unshift(11), array);
+console.log(array.shift(7), array);
+
+console.log(array.slice(1,4),array);
+array.splice(3,4);
+console.log(array);
+
+const Ar=['Sanket', 'Komal', 'Richa','Payal', 'Yash', 'Rohit', 'Anna','Chawaa'];
+Ar.splice(0,0,"Ritu");
+console.log(Ar);
+console.log(Ar.reverse());
+console.log(Ar.sort());
+
+// (function() {
+//     var a = b = 5;
+//   })();
+  
+//   console.log(b);
+console.log(`x , x++ ,++x`);
+  let x= 10 ;
+  let y = x++;
+
+  console.log(x);
+  console.log(y);
+  let z = ++x; 
+
+  console.log(z); 
+//   console.log(x);
+//   console.log(x,y,z)
+
+  let a = [20];
+      let b = ["20"] ;
+      console.log(a[0]==b[0])
+      console.log(a[0]===b[0]);
+
+
+      function reverseString(string) {
+        return string.split("").reverse().join("");
+    }
+    reverseString('I will be placed before 15 April')
